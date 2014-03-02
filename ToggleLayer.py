@@ -1,5 +1,5 @@
 # Toggle UI element subclass of Pythonista scene.Layer
-# inspired by istabouttime.py https://gist.github.com/upwart/9288979
+# inspired by itsabouttime.py https://gist.github.com/upwart/9288979
 
 from scene import *
 
