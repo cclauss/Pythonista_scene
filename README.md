@@ -3,6 +3,7 @@ Pythonista_scene
 
 ###ToggleLayer
 Toggle UI element subclass of Pythonista scene.Layer
-inspired by [istabouttime.py][1]
+
+Inspired by [istabouttime.py][1]
 
 [1]: https://gist.github.com/upwart/9288979
