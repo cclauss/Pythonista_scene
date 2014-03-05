@@ -7,7 +7,7 @@ print(fmt.format(photo_count))
 if not photo_count:
     sys.exit('Pythonista does not have access to the camera roll or the camera roll is empty.')
 
-def get_ramdom_photo():  # returns the name (a string) of a random photo from the camera role
+def get_random_photo():  # returns the name (a string) of a random photo from the camera role
     return scene.load_pil_image(photos.get_fullscreen_image(random.randint(0, photo_count)))
 
 class MyScene(scene.Scene):
@@ -26,7 +26,7 @@ class MyScene(scene.Scene):
         if not self.frame_count % 180:  # once every three seconds
             if self.photo_layer.image:  # unload old image to save RAM
                 scene.unload_image(self.photo_layer.image)
-            self.photo_layer.image = get_ramdom_photo()
+            self.photo_layer.image = get_random_photo()
         self.frame_count += 1
 
 MyScene()
