@@ -5,7 +5,7 @@ fmt = '{} photos in your camera roll...'
 print(fmt.format(photo_count))
 
 if not photo_count:
-    sys.exit('Pythonista does not have access to the camera roll or it is empty.')
+    sys.exit('Pythonista does not have access to the camera roll or the camera roll is empty.')
 
 def get_ramdom_photo():  # returns the name (a string) of a random photo from the camera role
     return scene.load_pil_image(photos.get_fullscreen_image(random.randint(0, photo_count)))
