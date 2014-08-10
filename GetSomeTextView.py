@@ -1,7 +1,6 @@
 class GetSomeTextView(ui.View):
     def __init__(self):
         self.name = 'Enter some text:'
-        self.flex = 'LR' # 'TB' # 'WH'
         tf1 = self.make_text_field('top_field', 'Change me')
         tf1.y += 20  # move it down
         tf2 = self.make_text_field('bottom_field', 'Me too')
