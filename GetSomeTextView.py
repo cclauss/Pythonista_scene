@@ -1,8 +1,7 @@
-import ui
-
 class GetSomeTextView(ui.View):
     def __init__(self):
         self.name = 'Enter some text:'
+        self.flex = 'LR' # 'TB' # 'WH'
         tf1 = self.make_text_field('top_field', 'Change me')
         tf1.y += 20  # move it down
         tf2 = self.make_text_field('bottom_field', 'Me too')
@@ -15,9 +14,9 @@ class GetSomeTextView(ui.View):
     def make_text_field(self, name, default_text = ''):
         text_field = ui.TextField(name=name)
         text_field.text = default_text
-        text_field.x = 175
         text_field.height = 20
         text_field.width = 200
+        text_field.flex = 'LR'  # centered in its superview
         self.add_subview(text_field)
         return text_field
     
