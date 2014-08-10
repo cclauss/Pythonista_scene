@@ -2,10 +2,9 @@ class GetSomeTextView(ui.View):
     def __init__(self):
         self.name = 'Enter some text:'
         tf1 = self.make_text_field('top_field', 'Change me')
-        tf1.y += 20  # move it down
         tf2 = self.make_text_field('bottom_field', 'Me too')
-        tf2.y += 60
         tf1.action = tf2.action = self.textfield_action
+        tf1.y += 20 ; tf2.y += 60  # move them down
         self.present('sheet')
         print('-' * 20)
         self.wait_modal()
