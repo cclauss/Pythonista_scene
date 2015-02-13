@@ -1,4 +1,6 @@
-# tilting_color.py -- A gravity hack...
+# tilting_color.py -- A gravity hack that uses Pythonista's motion.get_attitude() or
+# scene.gravity() method to change screen colors when the user tilts their device.
+# Red = abs(pitch), Green = abs(yaw), Blue = abs(roll)
 
 import motion, scene
 
