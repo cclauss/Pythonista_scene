@@ -1,7 +1,7 @@
 import scene, ui
 
-class MyScene (scene.Scene):
-    def draw (self):
+class MyScene(scene.Scene):
+    def draw(self):
         scene.background(0, 0, 0)
         scene.fill(1, 0, 0)
         for touch in self.touches.values():
