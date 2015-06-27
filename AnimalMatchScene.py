@@ -15,11 +15,6 @@ def animal_name(image_name):
              'honeybee': 'bee' }.get(name, name)
     return ' '.join(name)  # add spaces between each letter
 
-def make_animal_layer(image_name, w, h):
-    layer = scene.Layer(scene.Rect(0, 0, w, h))
-    layer.image = image_name
-    return layer
-
 class AnimalMatchScene(scene.Scene):
     def __init__(self):
         self.current_animal = None
@@ -31,7 +26,9 @@ class AnimalMatchScene(scene.Scene):
         w = self.col_width = self.size.w / 4
         h = self.row_height = (self.size.h - 200) / 4
         for animal in animals:
-            self.add_layer(make_animal_layer(animal, w, h))
+            layer = scene.Layer(scene.Rect(0, 0, w, h))
+            layer.image = animal
+            self.add_layer(layer)
         self.shuffle_layer_locations()
         self.current_animal = self.different_layer()
 
