@@ -19,7 +19,7 @@ class days_until_event(scene.Scene):
 
 prompt = '''Please enter the event name.
 i.e. First day of school'''
-event_name = console.input_alert('Event', prompt, '', 'Enter')
+event_name = console.input_alert('Event', prompt, '', 'Enter').strip() or 'My event'
 prompt = '''Please enter the date you would like to countdown to.
 i.e. 2009 (year),6 (month),29 (day)'''
 event_date = console.input_alert('Date', prompt, '', 'Enter')
