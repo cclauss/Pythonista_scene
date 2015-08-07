@@ -12,7 +12,6 @@ class Particle(object):
     def __init__(self, frame=None, velocity=None, color=None):
         self.frame = frame or scene.Rect(0, 0, 25, 25)
         self.velocity = velocity or scene.Point(0, 0)
-        self.save_velocity = self.velocity
         self.color = color or random_color()
 
     def update(self):
@@ -31,11 +30,9 @@ class Particle(object):
 
     def reverse_x(self):
         self.velocity.x *= -1
-        self.save_velocity = self.velocity
 
     def reverse_y(self):
         self.velocity.y *= -1
-        self.save_velocity = self.velocity
 
     def keep_in_bounds(self, bounds):
         if (self.frame.x <= bounds.x
@@ -52,7 +49,6 @@ def random_particle():
 
 class MyScene(scene.Scene):
     def __init__(self):
-        #self.player = Particle()
         self.save_velocity_x = g_speed
         self.enemies = [random_particle() for i in xrange(g_number_of_enemies)]
         scene.run(self, scene.LANDSCAPE)
